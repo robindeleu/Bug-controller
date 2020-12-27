@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.vives.controller.FXMLController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BUG - Universial Controller" textAlignment="CENTER" wrappingWidth="599.7367553710938">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <VBox prefHeight="48.0" prefWidth="600.0" />
+      <HBox prefHeight="297.0" prefWidth="600.0">
+         <children>
+            <GridPane prefHeight="272.0" prefWidth="190.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fitHeight="108.0" fitWidth="60.0" onMouseClicked="#uphandler" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@ybutton.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="91.0" fitWidth="64.0" onMouseClicked="#righthandler" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@b_button.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="108.0" fitWidth="61.0" onMouseClicked="#downhandler" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@a_button.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="109.0" fitWidth="60.0" onMouseClicked="#lefthandler" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@x_button.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <TextArea prefHeight="200.0" prefWidth="200.0" text="booting....&#10;" />
+            <GridPane prefHeight="270.0" prefWidth="190.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fitHeight="109.0" fitWidth="64.0" onMouseClicked="#yhandler" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@ybutton.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="104.0" fitWidth="68.0" onMouseClicked="#bhandler" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@b_button.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="112.0" fitWidth="62.0" onMouseClicked="#ahandler" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@a_button.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="108.0" fitWidth="64.0" onMouseClicked="#xhandler" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@x_button.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Health:" wrappingWidth="132.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+            <ProgressBar fx:id="healtprogress" prefHeight="72.0" prefWidth="460.0" progress="0.64" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bullets:" wrappingWidth="132.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+            <ProgressBar fx:id="bulletprogress" prefHeight="50.0" prefWidth="918.0" progress="0.8" />
+         </children>
+      </HBox>
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</VBox>

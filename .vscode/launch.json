@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MainApp",
+            "request": "launch",
+            "mainClass": "be.vives.controller.MainApp",
+            "projectName": "bug_controllers"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MainApp",
+            "request": "launch",
+            "mainClass": "be.vives.robin.MainApp",
+            "projectName": "bug_controllers"
+        }
+    ]
+}
